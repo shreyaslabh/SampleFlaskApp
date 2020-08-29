@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Client Form</title>
+</head>
+
+<body>
+	<header>
+		Please fill the Client Info
+	</header><br><br>
+
+
+	<a href="/database"><button>Database</button></a>
+
+
+	<form action="/csubmit" method="POST">
+		<br><span>Name :  <input type="text" name="cname" placeholder="John Doe" required></span><br>
+		<span>SSN Number :  <input type="text" name="ssn" placeholder="123-45-6789" required></span><br>
+		<span>Mobile Number :  <input type="text" name="mob" placeholder="9879879879" required></span><br>
+		<span>Email :  <input type="text" name="email" placeholder="john.doe@gmail.com" required></span><br>
+		<span>Address :  <input type="text" name="addr" placeholder="Mumbai" required></span><br><br>
+		<button type="submit" name="Submit">Submit</button>
+	</form>
+
+</body>

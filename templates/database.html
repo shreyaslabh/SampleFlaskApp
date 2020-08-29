@@ -1,0 +1,109 @@
+<html>
+<head>
+	<title>Database</title>
+
+   <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+   <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}"> <!-- Bootstrap-Core-CSS -->
+   <link rel="stylesheet" href="{{url_for('static',filename='css/modal.css')}}">
+
+</head>
+
+<style>
+
+.alert {
+  padding: 12px;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.alert-success {
+  border-color: darkgreen;
+  background-color: green;
+  color: white;
+}
+
+.alert-error {
+  border-color: darkred;
+  background-color: red;
+  color: white;
+}
+
+.alert-info {
+  border-color: orange;
+  background-color: yellow;
+  color: black;
+}
+
+
+
+</style>
+
+<body>
+      
+        
+      <div class="row">
+        <div class="col-md-6">
+    <h1>Database</h1>  
+          </div>
+          
+		
+
+	{% if data %}
+
+	<div class="row tab_box p_20">
+              <table class="table table-bordered">
+            <thead>
+              <tr>
+
+              	<th>Time Stamp</th> 
+                <th>Name</th>
+                <th>SSN Number</th>
+                <th>Mobile Number</th>
+                <th>Email</th>
+                <th>Address</th>
+        
+              </tr>
+            </thead>
+            <tbody>
+                  {% for row in data %}
+
+              <form action="#" method="POST">
+              <tr>
+                <td>{{row[6]}}</td>
+            
+                <td>{{row[1]}}</td>
+              
+                <td>{{row[2]}}</td>
+              
+                <td>{{row[3]}}</td>
+
+                <td>{{row[4]}}</td>
+              
+                <td>{{row[5]}}</td>
+                
+        
+                </tr>  
+              </form>
+
+                {% endfor %}
+
+
+            </tbody>
+          </table>
+      </div>
+
+
+	
+	{% else %}
+	{% for message in get_flashed_messages() %}
+		  		<br><br><br><br><div class="alert alert-info" style="width:50%;margin-left:2%;">{{ message }}</div>
+	{% endfor %}
+	{% endif %}
+		<a href="{{url_for('home')}}" style="margin-left: 2%;"><button>Home</button></a>
+
+	</div>
+</body>
+	

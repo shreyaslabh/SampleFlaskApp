@@ -1,0 +1,8 @@
+CREATE TABLE users(
+uid SERIAL,
+uname VARCHAR(100),
+ssn VARCHAR(50),
+mob VARCHAR(50),
+email VARCHAR(50),
+address VARCHAR(100),
+ts TIMESTAMP);

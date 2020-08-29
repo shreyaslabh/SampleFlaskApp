@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Client Info</title>
+</head>
+
+<body>
+	<br><br>
+
+	<form action="{{url_for('edit')}}" method="POST">
+		<span>DATA SUBMITTED!</span>
+		<input type="hidden" name="uid" value="{{uid}}"/>
+		<button type="submit">EDIT</button>
+	</form>
+		<a href="{{url_for('home')}}"><button>Home</button></a>
+
+</body>

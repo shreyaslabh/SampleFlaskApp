@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Client Info Edit</title>
+</head>
+
+<body>
+	<header>
+		Submitted Client Info
+	</header><br><br>
+
+	<form action="/cedit" method="POST">
+		<span>Name :  <input type="text" name="cname" value="{{data[1]}}" required/></span><br>
+		<span>SSN Number :  <input type="text" name="ssn" value="{{data[2]}}" required/></span><br>
+		<span>Mobile Number :  <input type="text" name="mob" value="{{data[3]}}" required/></span><br>
+		<span>Email :  <input type="text" name="email" value="{{data[4]}}" required/></span><br>
+		<span>Address :  <input type="text" name="addr" value="{{data[5]}}" required/></span><br>
+		<input type="hidden" name="uid" value="{{uid}}"/>
+		<button type="submit" name="submit">Submit</button>
+	</form>
+		<a href="{{url_for('home')}}"><button>Home</button></a>
+
+</body>
